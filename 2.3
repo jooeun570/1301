@@ -1,0 +1,261 @@
+mystery_string_1 = "grapes"
+mystery_string_2 = "Apples"
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+
+#Remember, greater than and less than operators can be used to
+#compare strings. A string is "less than" another string if it
+#comes earlier when sorted alphabetically.
+#
+#This can have some nuances, though, when it comes to
+#capitalization, punctuation, and spaces.
+#
+#Write some code below that will print True if mystery_string_1
+#comes before mystery_string_2 alphabetically according to
+#Python, and False if it does not.
+#
+#While this might be a simple line of code, we'd strongly
+#recommend checking out the submission results to see some of
+#the odd ways that Python performs. For example, don't be
+#surprised when your code says that it's True that "Grapes"
+#comes before "apples" alphabetically: Python puts all
+#upper-case letters before all lower-case letters.
+
+
+#Write your code here!
+print(mystery_string_1 < mystery_string_2)
+
+#########################
+mystery_string = "Hello, world!"
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+
+#The 'in' operator can be used to see if a string of characters
+#is found within another string of characters, just like it can
+#be used to find if an item is in a list.
+#
+#Above we've created a string with the variable name
+#mystery_string. Write some code below that will print True
+#if the string "world" appears within mystery_string, and
+#False if it does not.
+
+
+#Write your code here!
+print("world" in mystery_string)
+
+
+#########################
+balance = 20.0
+price = 19.0
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+
+#Imagine we're writing some software for a cash register or
+#credit card processor. We want to approve a purchase if the
+#customer's balance is greater than the purchase price, and
+#reject it otherwise.
+#
+#Write some code below that will print True if balance is
+#greater than or equal to price, and False if it is not.
+
+
+#Add your code here!
+print(balance >= price)
+
+########################
+hot = True
+cold = False
+rainy = True
+windy = False
+snowy = False
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+
+#Imagine you're writing a clothing-recommendation app that
+#makes suggestions based on the weather. It has booleans
+#representing five different kinds of weather: hot, cold,
+#rainy, windy, snowy.
+#
+#The app recommends four kinds of clothing:
+#
+# - a jacket, if it's either cold or windy.
+# - boots, if it's cold and snowy.
+# - flip flops, if it's hot, unless it's rainy.
+# - a t-shirt, if it's hot, unless it's rainy or windy.
+#
+#Write some code below that will print four lines, one for
+#each of the four types of clothing. Under the original
+#values for the variables above, the lines should look
+#like this:
+#
+#Jacket: False
+#Boots: False
+#Flip-Flops: False
+#T-shirt: False
+#
+#The values (True and False) will differ based on the
+#values assigned to hot, cold, windy, snowy, and rainy
+#at the start of the program.
+#
+#Hint: To print these lines, you'll need to add the
+#result of the expression to a string of the clothing item.
+#To do that, we'll need to convert the boolean from the
+#expression into a string.
+
+
+#Add your code here!
+print("Jacket:", cold or windy)
+print("Boots:", cold and snowy)
+print("Flip-Flops:", hot and (not rainy))
+print("T-shirt:", hot and (not (rainy or windy)))
+
+########################
+cold = False
+windy = False
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+
+#In this problem, we want to print the message, "You should
+#wear a jacket today!" if it's cold or windy, or the message
+#"You don't need a jacket today!" if it's not.
+#
+#At the bottom of this file, we've added some code that
+#handles printing these two messages. For this code to work,
+#the variable need_jacket needs to exist. Its value should be
+#True (the boolean, not the string) if it's cold or windy,
+#False if it's neither cold nor windy.
+
+
+#Add your code to create the variable need_jacket with the
+#appropriate value here!
+need_jacket = cold or windy
+
+#Do not modify the code below. It will work if you have
+#correctly create the variable need_jacket with the
+#appropriate value.
+if need_jacket:
+    print("You should wear a jacket today!")
+else:
+    print("You don't need a jacket today!")
+
+########################
+busy = True
+hungry = False
+tired = True
+stressed = False
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+
+#Logical operators get more complex when we start using them
+#with the results of other logical operators. So, let's try
+#it out!
+#
+#Using the variables above, we want to assess whether the
+#person is happy, sad, bored, confused, or anxious.
+#
+# - The person is happy if they're busy but not stressed.
+# - The person is sad if they're either hungry or tired.
+# - The person is confused if they're both happy and sad.
+# - The person is bored if they're neither happy, sad,
+#   nor busy.
+# - The person is anxious if they're neither happy nor sad,
+#   but they are stressed.
+#
+#Add code below whose output will list whether each of these
+#emotions is true or false. For example, with the original
+#values of the variables above, this would print:
+#
+#Happy: True
+#Sad: True
+#Confused: True
+#Bored: False
+#Anxious: False
+
+
+#Add your code here!
+print("Happy:", busy and (not stressed))
+print("Sad:", hungry or tired)
+print("Confused:", (busy and (not stressed)) and (hungry or tired))
+print("Bored:", not ((busy and (not stressed)) or (hungry or tired) or busy))
+print("Anxious:", (not ((busy and (not stressed)) or (hungry or tired))) and stressed)
+
+########################
+can_afford = True
+destination_is_safe = True
+educational_value = True
+relatives_nearby = True
+is_international = True
+have_passport = True
+afraid_to_fly = True
+have_a_car = True
+is_a_beach = True
+is_warm = False
+has_skiing = True
+is_a_city = True
+is_off_peak = True
+has_attraction = False
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+
+#Imagine for a moment that you're a college student who wants
+#to travel during spring break. You have a destination in
+#mind. What determines whether you can go there?
+#
+#First, how would you pay for the trip? If you can afford it
+#(can_afford), then all you need is for your parents to agree
+#to let you go. Your parents will agree to let you go if the
+#destination is safe (destination_is_safe). 
+#
+#If you can't afford it, then you need your parents to pay for
+#the trip. Your parents will pay for the trip if the destination
+#is safe (destination_is_safe) and if either there is educational
+#value (educational_value) or there are relatives nearby for
+#you to visit (relatives_nearby).
+#
+#Second, are you sure you're able to go to this location? If
+#it's international (is_international), then you'll need a
+#passport (have_passport) and you can't be afraid to fly
+#(afraid_to_fly). If it's not international (is_international),
+#then you either must have a car (have_a_car) or you can't be
+#afraid to fly (afraid_to_fly).
+#
+#Third, do you actually want to go to this location? If it's a
+#beach location (is_a_beach), then you want the weather to be
+#warm (is_warm). If it's instead a skiing location (has_skiing),
+#you don't want it to be warm (is_warm). If it's a tourist city
+#(is_a_city), then you either want it to be an off-peak travel
+#time (is_off_peak) or you want there to be an attraction in
+#town that week (has_attraction).
+#
+#If it's both a beach and a city, then you'd decide to go if it
+#meets the condition for the beach (it's warm) or for a city
+#(is an off-peak time or has an attraction). If it's both a
+#skiing location and a city, then you'd decide to go if it meets
+#either type of location's conditions as well.
+#
+#Your only goal here is to print True or False: True if the
+#destination represented by the variables is an acceptable
+#travel location, False if it is not.
+#
+#HINT: Don't try to do this all in one line. Break it into
+#smaller parts.
+
+
+#Add your code here!
+print(((can_afford and destination_is_safe) or (destination_is_safe and (educational_value or relatives_nearby))) and (is_international and (have_passport and (not afraid_to_fly)) or ((not is_international) and (have_a_car or (not afraid_to_fly)))) and ((is_a_beach and is_warm) or (has_skiing and (not is_warm)) or (is_a_city and (is_off_peak or has_has_attraction)) or ((is_a_beach and is_warm) and (is_a_city and (is_off_peak or has_has_attraction)))))
+
+########################
