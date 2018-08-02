@@ -1,0 +1,239 @@
+dividend = 7
+divisor = 3
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+
+#The variables above create a dividend and a divisor. Add
+#some code below that will print the quotient and remainder
+#of performing this operation. The quotient should be the
+#whole number, not the decimal number: for example, with the
+#original values of dividend and divisor (7 and 3), your code
+#should print 2, then 1: 3 goes into 7 two whole times, with
+#one left over.
+#
+#Print the quotient and remainder each on their own line.
+#Both values should be integers: there should be no decimals.
+
+
+#Add your code here!
+print(dividend // divisor)
+print(dividend % divisor)
+
+########################
+amount = 67
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+#
+#Write a program that will print out the coins needed to
+#arrive at the amount shown above. Assume that we always want
+#the maximum number of large coins: for example, for 67 cents,
+#we want 2 quarters, 1 dime, 1 nickel, and 2 pennies instead
+#of 6 dimes and 7 pennies.
+#
+#To make things easier, we've gone ahead and supplied your
+#print statements. All you need to do is create four variables:
+#quarters, dimes, nickels, and pennies.
+#
+#HINT: Change the value of amount as you go to reflect what
+#coins you've already found.
+
+
+#Add your code here!
+quarters = amount // 25
+amount = amount % 25
+dimes = amount // 10
+amount = amount % 10
+nickels = amount // 5
+amount = amount % 5
+pennies = amount // 1
+
+########################
+meal_cost = 10.00
+tax_rate = 0.08
+tip_rate = 0.20
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+
+#When eating at a restaurant in the United States, it's
+#customary to have two percentage-based surcharges added on
+#top of your bill: sales tax and tip. These percentages are
+#both applies to the original cost of the meal. For example,
+#a 10.00 meal with 8% sales tax and 20% tip would add 0.80
+#for tax (0.08 * 10.00) and 2.00 for tip (0.20 * 10.00).
+#
+#The variables above create the cost of a meal and identify
+#what percentage should be charged for tax and tip.
+#
+#Add some code below that will print the "receipt" for a
+#meal purchase. The receipt should look like this:
+#
+#Subtotal: 10.00
+#Tax: 0.8
+#Tip: 2.0
+#Total: 12.8
+#
+#Subtotal is the original value of meal_cost, tax is the
+#tax rate times the meal cost, tip is the tip rate times
+#the meal cost, and total is the sum of all three numbers.
+#Don't worry about the number of decimal places; it's fine
+#if your code leaves off some numbers (like 0.8 for tax) or
+#includes too many decimal places (like 2.121212121 for tip).
+
+
+#Add your code here!
+print("Subtotal:", meal_cost)
+print("Tax:", (tax_rate * meal_cost))
+print("Tip:", (tip_rate * meal_cost))
+print("Total:", meal_cost + (tax_rate * meal_cost) + (tip_rate * meal_cost))
+
+########################
+principal = 5000
+rate = 0.05
+time = 5
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+
+#One important formula in finance and accounting is the
+#formula for continually compounding interest. This formula
+#takes as input an amount of money invested, an interest
+#rate, and an amount of time (in years), and returns the
+#value of the investment after that period of time.
+#
+#The formula is:
+#
+#   amount = principal * e ^ (rate * time)
+#
+#Add some code below that will find the amount of money in
+#an account with the initial investment, interest rate, and
+#number of years given by the variables above. Note,
+#however, that we've gone ahead and supplied you the print
+#statement: you shouldn't need to change this. Instead, just
+#complete this code such that the variable 'amount' is
+#created with the right value.
+#
+#Note that e is a constant; you may access it with math.e --
+#you can use math.e as a variable like any other after
+#importing math:
+
+import math
+
+#Add your code here such that there exists a variable named
+#'amount' with the amount in the account after the given
+#time at the given interest rate.
+e = math.e
+amount = principal * (e ** (rate * time))
+
+#Don't touch the line of code below!
+print("After " + str(time) + " years invested with a " + str(rate) + " interest rate, a $" + str(principal) + " investment will be worth $" + str(round(amount, 2)) + ".")
+
+########################
+start_hour = 3
+start_minute = 48
+length = 172
+
+#Let's try something trickier! The variables above represent
+#the start time for a run as well as the length of the run
+#in minutes. The original values, for example, show a run
+#that started at 3:48 and lasted 172 minutes.
+#
+#Add some code below that will print the time at which the
+#run will end, using normal formatting (e.g. 6:40 for the
+#original data above). To do this, you'll need to somehow
+#find both the hours and minutes of the new time, convert
+#both to strings, and add those to the colon ":" to print
+#the time.
+#
+#You may assume that the length of the run will never cross
+#12:59 (e.g. you don't have to worry about going from
+#12:59 to 1:00 or 23:59 to 0:00). You also don't need to
+#worry about the lack of 0 in front of single-digit minute
+#counts (e.g. it's fine to show 5:07 as 5:7).
+
+
+#Add your code here!
+end_hour = start_hour + (length // 60)
+length = length % 60
+end_minute = start_minute + length 
+end_hour = end_hour + (end_minute // 60)
+end_minute = end_minute % 60
+
+print(str(end_hour) + ":" + str(end_minute))
+
+########################
+dosage = 100
+time_since_last_dose = 7
+is_nighttime = False
+took_something_cross_reactive = False
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+#
+#Let's try to use our mathematical operators and logical
+#operators together.
+#
+#Imagine you've been battling a cold. You're deciding whether
+#to take cough syrup or not, and if so, how much to take.
+#
+#time_since_last_dose represents the number of hours since
+#you last took some cough syrup. For every hour it's been,
+#you're allowed to have one dose.
+#
+#If it's nighttime (is_nighttime), then you may double
+#your dose since you won't be taking any until morning.
+#
+#However, if you've taken something cross-reactive
+#(took_something_cross_reactive), then you should not take
+#any cough syrup.
+#
+#Write a program that will print how large a dose of cough
+#syrup to take.
+#
+#HINT: Remember, if you try to multiply a number times a
+#boolean, Python treats False as 0 and True as 1. There are
+#other ways to do this, though.
+
+
+#Add your code here!
+dosage = dosage * time_since_last_dose
+dosage_nighttime = (dosage * int(2 * is_nighttime)) * int(not took_something_cross_reactive)
+dosage_daytime = dosage * int(not took_something_cross_reactive)
+
+if is_nighttime == True:
+    print(dosage_nighttime)
+    
+else:
+    print(dosage_daytime)
+
+########################
+mystery_value_1 = 6
+mystery_value_2 = 3
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+#
+#Print a sentence describing the values you get when you add,
+#subtract, multiply, and divide the numbers above. The
+#sentence should look like this:
+#
+#The sum is 9, the difference is 3, the product is 18, and the
+#quotient is 2.0.
+#
+#Make sure to include all commas, spaces, and periods exactly
+#as shown -- the only thing that should change based on the
+#values of the variables is the numbers.
+
+
+#Add your code here!
+print("The sum is {0}, the difference is {1}, the product is {2}, and the quotient is {3}".format((mystery_value_1 + mystery_value_2), (mystery_value_1 - mystery_value_2), (mystery_value_1 * mystery_value_2), mystery_value_1 / mystery_value_2) + ".")
+
+########################
