@@ -1,0 +1,288 @@
+cafe = "Octane"
+balance = 7.5
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+
+#Atlanta is full of great coffee places. Unfortunately, great
+#coffee is usually expensive. The variables above will
+#contain a balance and a cafe name. Below are the prices of
+#a cup of coffee at each of three locations:
+#
+# - Octane: $6
+# - Galloway: $5
+# - Starbucks: $4
+# - Revelator: $3
+# - Dunkin: $2
+#
+#Add some code above that will print one of the following
+#two messages depending on whether the value of balance is
+#high enough to buy a cup of coffee at the given cafe.
+#
+# - If it is sufficient, print "With [balance] dollars, I
+#   can buy coffee at [cafe]"
+# - If it is not sufficient, print "With [balance] dollars,
+#   I cannot buy coffee at [cafe]"
+
+
+#Add your code here!
+if cafe == "Octane":
+    if balance >= 6:
+        print("With", balance, "dollars,", "I can buy coffee at", cafe)
+    else:
+        print("With", balance, "dollars,", "I cannot buy coffee at", cafe)
+elif cafe == "Galloway":
+    if balance >= 5:
+        print("With", balance, "dollars,", "I can buy coffee at", cafe)
+    else:
+        print("With", balance, "dollars,", "I cannot buy coffee at", cafe)
+elif cafe == "Starbucks":
+    if balance >= 4:
+        print("With", balance, "dollars,", "I can buy coffee at", cafe)
+    else:
+        print("With", balance, "dollars,", "I cannot buy coffee at", cafe)
+elif cafe == "Revelator":
+    if balance >= 3:
+        print("With", balance, "dollars,", "I can buy coffee at", cafe)
+    else:
+        print("With", balance, "dollars,", "I cannot buy coffee at", cafe)
+elif cafe == "Dunkin":
+    if balance >= 2:
+        print("With", balance, "dollars,", "I can buy coffee at", cafe)
+    else:
+        print("With", balance, "dollars,", "I cannot buy coffee at", cafe)
+
+########################
+principal = 5000
+rate = 0.05
+time = 5
+goal = 7000
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+
+#Recall in problem 2.4.5 you wrote some code that calculated
+#the amount of money in an account based on this formula:
+#
+#   amount = principal * e ^ (rate * time)
+#
+#Those three variables are given above again, as well as a
+#fourth: goal. We want to see if the investment given by
+#these values will exceed the goal. If it will, we want to
+#print this message:
+#
+#  "You'll exceed your goal by [extra money]"
+#
+#If it will not, we want to print this message:
+#
+#  "You'll fall short of your goal by [needed money]"
+#
+#If the investor will meet their goal, [extra money] should
+#be the final amount minus the goal. If the investor will
+#not meet their goal, [needed money] will be the goal minus
+#the final amount.
+#
+#To make the output more legible, though, we want to round
+#the difference to two decimal places. If the difference is
+#contained in a variable called 'difference', then we can
+#do this to round it: rounded_diff = round(difference, 2)
+#
+#Working with new and unfamiliar functions or abilities is
+#part of learning to code, so use this function in your
+#answer!
+
+import math
+
+#Remember, you can access e with math.e.
+e = math.e
+amount = principal * (e ** (rate * time))
+#Add your code here! Feel free to copy your code from 
+#problem 2.4.5.
+if amount > goal:
+    print("You'll exceed your goal by", round(amount - goal, 2))
+elif amount <= goal:
+    print("You'll fall short of your goal by", round(goal - amount, 2))
+
+########################
+egg = True
+milk = True
+butter = True
+flour = True
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+
+#Imagine you're deciding what you want to cook. The boolean
+#variables above state whether or not you have each of those
+#four ingredients.
+#
+#Here are the dishes you know how to cook and their
+#ingredients:
+#
+# 1. pancakes: egg, milk, butter, flour
+# 2. omelette: egg, milk, butter
+# 3. custard: egg, milk
+# 4. poached eggs: egg
+#
+#The list above is also a priority list. If you have the
+#ingredients for pancakes, you'll make pancakes instead of
+#any of the other dishes. If you're missing flour but have
+#the other ingredients, you'll make an omlette. You'll only
+#make poached eggs if the only ingredient you have is eggs.
+#
+#Complete the program below such that it prints which dish
+#you'll make based on the ingredients you have handy. All
+#the dishes should appear exactly as shown above: all lower
+#case, spelled the same way. If you do not have the
+#ingredients to make any of these dishes, then print the
+#text "Go to the store!"
+
+
+#Add your code here!
+if egg:
+    if milk:
+        if butter:
+            if flour:
+                print("pancakes")
+            else:
+                print("omelette")
+        else:
+            print("custard")
+    else:
+        print("poached eggs")
+else:
+    print("Go to the store!")
+
+########################
+story = "A"
+text = "B"
+role = "C"
+director = "D"
+cast = "F"
+
+#You may modify the lines of code above, but don't move them!
+#When you Submit your code, we'll change these lines to
+#assign different values to the variables.
+#
+#In Bryan Cranston's autobiography, he describes how after
+#his success on Breaking Bad, he developed a scoring system
+#for evaluating new scripts that he received.
+#
+#First, he would assign the script a grade -- A, B, C, D, or
+#F -- in each of five categories: Story, Text, Role, Director,
+#and Cast.
+#
+#Then, he would tally those grades into a total score for the
+#script, according to the following chart:
+#
+#            A   B   C   D   F
+# Story     +6  +5  +4  +2  +0
+# Text      +5  +4  +3  +1  +0
+# Role      +4  +3  +2  +1  +0
+# Director  +3  +2  +1  +0  +0
+# Cast/Misc +2  +1  +0  +0  +0
+#
+#For example: an A story, B text, C role, D directory, and
+#F cast would get a score of 12: +6 for the story, +4 for the
+#text, +2 for the role, +0 for the director, and +0 for the
+#cast.
+#
+#Then, based on that score, the script would be assigned a
+#category (note these are slightly different from the image
+#because we've excluded the time variable):
+#
+# 20: Perfect score
+# 17 to 19: Must do
+# 14 to 16: Seriously consider
+# 12 to 13: On the bubble
+# Below 11: Pass
+#
+#The variables above give the letter grades assigned to each
+#of the five components. Write a program that calculates the
+#total score he would assign to the script represented by
+#these variables. Then on the next line, print the category
+#he would assign to that script. For example, for the values
+#above, this program would print:
+#
+#12
+#Pass
+#
+#HINT: This is a *long* program. It's not particularly
+#complex -- you're doing the same thing over and over, However,
+#that 'same thing' required 4-8 lines each time you do it. Our
+#answer is 46 lines long! So, don't think you're off-track just
+#because you're writing a lot of lines.
+
+
+#Add your code here!
+score = 0
+
+if story == "A":
+    score += 6
+elif story == "B":
+    score += 5
+elif story == "C":
+    score += 4
+elif story == "D":
+    score += 2
+else:
+    score += 0
+    
+if text == "A":
+    score += 5
+elif text == "B":
+    score += 4
+elif text == "C":
+    score += 3
+elif text == "D":
+    score += 1
+else:
+    score += 0
+    
+if role == "A":
+    score += 4
+elif role == "B":
+    score += 3
+elif role == "C":
+    score += 2
+elif role == "D":
+    score += 1
+else:
+    score += 0
+    
+if director == "A":
+    score += 3
+elif director == "B":
+    score += 2
+elif director == "C":
+    score += 1
+else:
+    score += 0
+    
+if cast == "A":
+    score += 2
+elif cast == "B":
+    score += 1
+else:
+    score += 0
+
+print(score)
+    
+if score > 11:
+    if score > 13:
+        if score > 16:
+            if score > 19:
+                print("Perfect score")
+            else:
+                print("Must do")
+        else:
+            print("Seriously consider")
+    else:
+        print("On the bubble")
+else:
+    print("Pass")
+    
+########################
